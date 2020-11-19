@@ -94,6 +94,14 @@ begin
     Op <= "01";
     wait for 50ns;
     
+    -- A nor B
+    selA <= '1';
+    selB <= '1';
+    A <= "0101";
+    B <= "1110";
+    Op <= "00";
+    wait for 50ns;
+    
     -- A xor B
     selA <= '0';
     selB <= '0';
@@ -109,7 +117,33 @@ begin
     B <= "1110";
     Op <= "10";
     wait for 50ns;
-
+    
+    -- A = 5, B = 7
+    -- A + B
+    selA <= '0';
+    selB <= '0';
+    A <= "0101";
+    B <= "0111";
+    Op <= "11";
+    wait for 50ns;
+    
+    -- A = 5, B = 5
+    -- A - B
+    selA <= '0';
+    selB <= '1';
+    A <= "0101";
+    B <= "0101";
+    Op <= "11";
+    wait for 50ns;
+    
+    -- A nand B
+    selA <= '1';
+    selB <= '1';
+    A <= "0101";
+    B <= "0101";
+    Op <= "01";
+    wait for 50ns;
+    
 end process;
 
 end Behavioral;

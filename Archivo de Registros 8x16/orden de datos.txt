@@ -1,0 +1,1 @@
+wr she dir writeReg writeData readReg1 readReg2 shamt clr

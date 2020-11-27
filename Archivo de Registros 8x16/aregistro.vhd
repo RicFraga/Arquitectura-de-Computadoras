@@ -27,8 +27,7 @@ signal registros_b: bit_vector(15 downto 0);
 
 begin
 
-process(writeReg, writeData, readReg1, readReg2, shamt, clr, clk, WR, SHE, DIR)
-
+process(clr, clk, WR, SHE, DIR)
 begin
     
     -- Operación de clear    
@@ -49,13 +48,13 @@ begin
         
         -- Desplazamiento a la derecha >>
         elsif(WR = '1' and SHE = '1' and DIR = '0') then
-            registros_b <= to_bitvector(registros(conv_integer(readReg1))) srl conv_integer(shamt);
-            registros(conv_integer(readReg1)) <= to_stdlogicvector(registros_b);
+            registros_b <= to_bitvector(registros(conv_integer(readReg2))) srl conv_integer(shamt);
+            registros(conv_integer(writeReg)) <= to_stdlogicvector(registros_b);
         
         -- -- Desplazamiento a la izquierda <<
         elsif(WR = '1' and SHE = '1' and DIR = '1') then
-            registros_b <= to_bitvector(registros(conv_integer(readReg1))) sll conv_integer(shamt);
-            registros(conv_integer(readReg1)) <= to_stdlogicvector(registros_b);
+            registros_b <= to_bitvector(registros(conv_integer(readReg2))) sll conv_integer(shamt);
+            registros(conv_integer(writeReg)) <= to_stdlogicvector(registros_b);
         
         end if;     
     end if;
@@ -64,4 +63,5 @@ begin
     readData2 <= registros(conv_integer(readReg2));
     
 end process;
+
 end Behavioral;

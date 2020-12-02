@@ -22,13 +22,11 @@ begin
 
 process(clk)
 begin
-    
-    dataOut <= memoria(conv_integer(dir));
     if(rising_edge(clk) and WD = '1') then
         memoria(conv_integer(dir)) <= dataIn;
         
-    end if;
-        
-    end process;
+    end if;   
+end process;
+dataOut <= memoria(conv_integer(dir));
 
 end Behavioral;

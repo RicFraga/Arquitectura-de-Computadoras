@@ -15,8 +15,8 @@ end memoria_dat;
 architecture Behavioral of memoria_dat is
 
 type matriz IS ARRAY(0 to 2047) OF STD_LOGIC_VECTOR(15 downto 0);
-signal memoria : matriz := (others => x"0000");
---signal memoria: matriz;
+--signal memoria : matriz := (others => x"0000");
+signal memoria: matriz;
 
 begin
 

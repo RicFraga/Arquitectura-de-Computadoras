@@ -100,7 +100,7 @@ begin
         
         Hwrite(LINEA_RES, var_dir, right, 5);
         write(LINEA_RES, WD, right, 10);
-        Hwrite(LINEA_RES, var_dataIn, right, 5);
+        Hwrite(LINEA_RES, var_dataIn, right, 8);
         Hwrite(LINEA_RES, var_dataOut, right, 8);
         
         writeline(ARCH_RES, LINEA_RES);

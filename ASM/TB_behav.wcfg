@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
+      <Cursor1Time time="95000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="99"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/TB/D" type="array">
+      <obj_property name="ElementShortName">D[8:0]</obj_property>
+      <obj_property name="ObjectShortName">D[8:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB/Qa" type="array">
+      <obj_property name="ElementShortName">Qa[8:0]</obj_property>
+      <obj_property name="ObjectShortName">Qa[8:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB/INI" type="logic">
+      <obj_property name="ElementShortName">INI</obj_property>
+      <obj_property name="ObjectShortName">INI</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB/CLR" type="logic">
+      <obj_property name="ElementShortName">CLR</obj_property>
+      <obj_property name="ObjectShortName">CLR</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB/DISPLAY" type="array">
+      <obj_property name="ElementShortName">DISPLAY[6:0]</obj_property>
+      <obj_property name="ObjectShortName">DISPLAY[6:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

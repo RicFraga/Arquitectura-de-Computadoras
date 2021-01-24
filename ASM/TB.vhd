@@ -36,7 +36,10 @@ begin
             DISPLAY => DISPLAY
             );
     process
-    begin
+        begin
+        wait for 90ns;
+
+        
         CLR <= '1';
         wait for 10 ns;
         CLR <= '0';
@@ -75,8 +78,6 @@ begin
         wait for 10 ns;
         INI <= '0';
         wait for 150 ns;
-        
-        
         
     end process;
     

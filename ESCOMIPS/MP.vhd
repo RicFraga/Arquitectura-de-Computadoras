@@ -8,7 +8,7 @@ entity MP is
         m : integer := 10;
         n : integer := 25;
         i : integer := 25; -- NUMERO DE ELEMENTOS EN ARREGLO DE BUUBLE SORT
-        AD : integer := 15;  -- ORIENTACIÓN DE ARREGLO : 17 = ASC, 15 =DESC
+        AD : integer := 15;  -- ORIENTACIï¿½N DE ARREGLO : 17 = ASC, 15 =DESC
         q : integer := 0; --NUMERO POR EL QUE EMPIEZA A LLENAR EL ARREGLO
         w : integer := 29;
         e : integer := 36
@@ -41,52 +41,51 @@ TYPE BANCO IS ARRAY (0 to (2**m)-1) of std_logic_vector(n-1 downto 0);
 CONSTANT DEFAULT_PROGRAM : BANCO :=(
   
     --BUBBLE SORT
-
     --MAIN
-    COP(20) & SU & x"0005", --0        
-    COP(20) & SU & x"000E", --1          
-    COP(20) & SU & x"0021", --2       
-    COP(22) & SU & SU & SU & SU & SU, --3
-    COP(19) & SU & x"0002", --4
+    --COP(20) & SU & x"0005", --0        
+    --COP(20) & SU & x"000E", --1          
+    --COP(20) & SU & x"0021", --2       
+    --COP(22) & SU & SU & SU & SU & SU, --3
+    --COP(19) & SU & x"0002", -- 4
     --RELLENA 
-    COP(1) & R(0) & x"0000", --5
-    COP(1) & R(1) & J, --6
-    COP(1) & R(2) & A, --7
-    COP(15) & R(1) & R(0) & x"002", --8
-    COP(21) & SU & SU & SU & SU & SU, --9
-    COP(4) & R(2) & R(0) & x"000", --10
-    COP(5) & R(0) & R(0) & x"001", --11
-    COP(5) & R(2) & R(2) & x"002", --12
-    COP(19) & SU & x"0008", --13
+    --COP(1) & R(0) & x"0000", --5
+    --COP(1) & R(1) & J, --6
+    --COP(1) & R(2) & A, --7
+    --COP(15) & R(1) & R(0) & x"002", --8
+    --COP(21) & SU & SU & SU & SU & SU, --9
+    --COP(4) & R(2) & R(0) & x"000", --10
+    --COP(5) & R(0) & R(0) & x"001", --11
+    --COP(5) & R(2) & R(2) & x"002", --12
+    --COP(19) & SU & x"0008", --13
     --Ordena DESC
-    COP(1) & R(3) & x"0000",--14
-    COP(6) & R(4) & R(1) & x"001",--15
-    COP(15) & R(4) & R(3) & x"002",--16
-    COP(21) & SU & SU & SU & SU & SU,--17
-    COP(1) & R(5) & x"0000",--18
-        COP(0) & R(6) & R(1) & R(3) & SU & CR(1),--19
-        COP(6) & R(6) & R(6) & x"001",--20
-        COP(15) & R(6) & R(5) & x"003",--21
-        COP(5) & R(3) & R(3) & x"001",--22
-        COP(19) & SU & x"0010",--23
-            COP(23) & R(7) & R(5) & x"000",--24
-            COP(23) & R(8) & R(5) & x"001",--25
-            COP(AD) & R(8) & R(7) & x"003",--26
-            COP(5) & R(5) & R(5) & x"001",--27
-            COP(19) & SU & x"0015",--28
-            COP(5) & R(9) & R(7) & x"000",--29
-            COP(4) & R(8) & R(5) & x"000",--30
-            COP(4) & R(9) & R(5) & x"001",--31
-            COP(19) & SU & x"001B",--32 
+    --COP(1) & R(3) & x"0000",--14
+    --COP(6) & R(4) & R(1) & x"001",--15
+    --COP(15) & R(4) & R(3) & x"002",--16
+    --COP(21) & SU & SU & SU & SU & SU,--17
+    --COP(1) & R(5) & x"0000",--18
+      --  COP(0) & R(6) & R(1) & R(3) & SU & CR(1),--19
+       -- COP(6) & R(6) & R(6) & x"001",--20
+        --COP(15) & R(6) & R(5) & x"003",--21
+        --COP(5) & R(3) & R(3) & x"001",--22
+        --COP(19) & SU & x"0010",--23
+          --  COP(23) & R(7) & R(5) & x"000",--24
+           -- COP(23) & R(8) & R(5) & x"001",--25
+            --COP(AD) & R(8) & R(7) & x"003",--26
+            --COP(5) & R(5) & R(5) & x"001",--27
+            --COP(19) & SU & x"0015",--28
+            --COP(5) & R(9) & R(7) & x"000",--29
+            --COP(4) & R(8) & R(5) & x"000",--30
+            --COP(4) & R(9) & R(5) & x"001",--31
+            --COP(19) & SU & x"001B",--32 
     --MUESTRA
-    COP(1) & R(0) & x"0000",--33
-    COP(1) & R(1) & J,--34
-    COP(15) & R(1) & R(0) & x"002",--35
-    COP(21) & SU & SU & SU & SU & SU,--36
-    COP(23) & R(7) & R(0) & x"000",--37
-    COP(0) & R(15) & R(0) & R(7) & SU & CR(0),--38
-    COP(5) & R(0) & R(0) & x"001",--39
-    COP(19) & SU & x"0023",--40
+    --COP(1) & R(0) & x"0000",--33
+    --COP(1) & R(1) & J,--34
+    --COP(15) & R(1) & R(0) & x"002",--35
+    --COP(21) & SU & SU & SU & SU & SU,--36
+    --COP(23) & R(7) & R(0) & x"000",--37
+    --COP(0) & R(15) & R(0) & R(7) & SU & CR(0),--38
+    --COP(5) & R(0) & R(0) & x"001",--39
+    --COP(19) & SU & x"0023",--40
 
 --      --Menor de 3 numeros
 --      COP(1) & R(0) & A,--0
@@ -103,45 +102,27 @@ CONSTANT DEFAULT_PROGRAM : BANCO :=(
 --      COP(19) & SU & x"000B",--11 
       
 --    --PRUEBA SUMA Y GUARDA MEMORIA
---    COP(1) & R(0) & x"0001",--0
---    COP(1) & R(1) & x"0007",--1
---    COP(0) & R(1) & R(1) & R(0) & SU & CR(0),--2
---    COP(3) & R(1) & x"0005", --3
-----    COP(2) & R(2) & x"0005",--4
-----    COP(0) & R(3) & R(1) & R(2) & SU & CR(0),--5
---    COP(19) & SU & x"0002",--6
+   -- COP(1) & R(0) & x"0001",--0
+    --COP(1) & R(1) & x"0007",--1
+    --COP(0) & R(1) & R(1) & R(0) & SU & CR(0),--2
+    --COP(3) & R(1) & x"0005", --3
+    --COP(2) & R(2) & x"0005",--4
+    --COP(0) & R(3) & R(1) & R(2) & SU & CR(0),--5
+    --COP(19) & SU & x"0002",--6
 
---    --PROGRAMA ASIGNADO
---    COP(1) & R(0) & x"0037",--0
---    COP(1) & R(1) & x"000A",--1
---    COP(1) & R(2) & x"0000",--2
+    --PROGRAMA ASIGNADO
+    COP(1) & R(1) & x"0008",
+    COP(1) & R(2) & x"0008",
+    COP(1) & R(4) & x"0001",
     
---    COP(4) & R(0) & R(2) & x"000",--3
-    
---    COP(5) & R(2) & R(2) & x"001",--4
---    COP(6) & R(0) & R(0) & x"002",--5
-    
---    COP(14) & R(1) & R(2) & x"FFD",--6
-    
---    COP(2) & R(4) & X"0000",--7
---    COP(2) & R(5) & X"0001",---8
---    COP(2) & R(6) & X"0002",--9
---    COP(2) & R(7) & X"0003",--10
---    COP(2) & R(8) & X"0004",--11
---    COP(2) & R(9) & X"0005",--12
---    COP(2) & R(10) & X"0006",--13
---    COP(2) & R(11) & X"0007",--14
---    COP(2) & R(12) & X"0008",--15
---    COP(2) & R(13) & X"0009",--16
-    
---    COP(0) & R(3) & R(4) & R(5) & SU & CR(0),--17
---    COP(0) & R(3) & R(6) & R(7) & SU & CR(0),--18
---    COP(0) & R(3) & R(8) & R(9) & SU & CR(0),--19
---    COP(0) & R(3) & R(10) & R(11) & SU & CR(0),--20
---    COP(0) & R(3) & R(12) & R(13) & SU & CR(0),--21
-    
---    COP(22) & SU & SU & SU & SU & SU,--7--22
---    COP(19) & SU & x"0007",--8--23
+    COP(0) & R(3) & R(2) & R(2) & SU & CR(0),
+    COP(5) & R(4) & R(4) & x"001",
+    COP(18) & R(1) & R(4) & x"004",
+    COP(0) & R(3) & R(3) & R(2) & SU & CR(0),
+    COP(5) & R(4) & R(4) & x"001",
+    COP(19) & SU & X"0005",    
+    COP(22) & SU & SU & SU & SU & SU,
+    COP(19) & SU & X"0009",
     
     others => (others => '0')
     );
